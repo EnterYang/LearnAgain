@@ -78,3 +78,5 @@ UIGraphicsEndImageContext();
 我们应该尽量避免重写 drawRect 方法。不恰当的使用这个方法会导致内存暴增。举个例子，iPhone6 上与屏幕等大的 UIView，即使重写一个空的 drawRect 方法，它也至少占用 750 * 1134 * 4 字节 ≈ 3.4 Mb 的内存。在 内存恶鬼drawRect 及其后续中，作者详细介绍了其中原理，据他测试，在 iPhone6 上空的、与屏幕等大的视图重写 drawRect 方法会消耗 5.2 Mb 内存。总之，能避免重写 drawRect 方法就尽可能避免。
 ####方法四：
 相对最优方案
+
+####转载请注明出处 https://github.com/EnterYang
